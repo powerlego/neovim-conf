@@ -1,0 +1,10 @@
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
+lua/config/rustfmt.lua
+lazy-lock.json

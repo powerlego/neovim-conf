@@ -1,8 +1,10 @@
 return {
     {
         "hat0uma/csvview.nvim",
-        config = function()
-            require("csvview").setup()
-        end,
+        opts = {
+            view = {
+                display_mode = "border",
+            },
+        },
     },
 }

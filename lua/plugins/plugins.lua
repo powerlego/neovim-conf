@@ -2,6 +2,21 @@ local rustfmt = require("config/rustfmt").location
 
 return {
     {
+        "olimorris/onedarkpro.nvim",
+        priority = 1000, -- Ensure it loads first
+        opts = {
+            options = {
+                cursorline = true,
+            },
+        },
+    },
+    {
+        "LazyVim/LazyVim",
+        opts = {
+            colorscheme = "onedark",
+        },
+    },
+    {
         "mrcjkb/rustaceanvim",
         opts = {
             server = {
@@ -53,5 +68,24 @@ return {
             table.insert(opts.formatters_by_ft["rust"], "rustfmt")
             opts.formatters_by_ft["rust"].lsp_format = "prefered"
         end,
+    },
+    {
+        "nvim-neotest/neotest",
+        dependencies = {
+            "marilari88/neotest-vitest",
+        },
+        opts = {
+            adapters = {
+                ["neotest-vitest"] = {},
+            },
+        },
+    },
+    {
+        "hat0uma/csvview.nvim",
+        opts = {
+            view = {
+                display_mode = "border",
+            },
+        },
     },
 }

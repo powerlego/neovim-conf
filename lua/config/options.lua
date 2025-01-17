@@ -36,3 +36,8 @@ end
 for name, value in pairs(global_local) do
     vim.api.nvim_set_option_value(name, value, {})
 end
+
+if vim.g.neovide then
+    vim.o.guifont = "RobotoMono Nerd Font Mono:h11"
+    vim.g.neovide_cursor_animation_length = 0
+end

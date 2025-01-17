@@ -7,4 +7,3 @@ foo.*
 *.log
 data
 lua/config/rustfmt.lua
-lazy-lock.json

@@ -11,7 +11,7 @@ local global_local = {
     shiftwidth = 4,
     tabstop = 4,
     visualbell = true,
-    shell = "pwsh",
+    shell = '"C:\\Program Files\\PowerShell\\7\\pwsh.exe"',
     shellcmdflag = "-NoLogo -Command",
     shellquote = "\\",
     shellxquote = "",
@@ -23,6 +23,8 @@ end
 local function use_if_defined(val, fallback)
     return val ~= nil and val or fallback
 end
+
+vim.g.lazyvim_eslint_auto_format = true
 
 -- custom python provider
 local conda_prefix = os.getenv("CONDA_PREFIX")
@@ -39,5 +41,5 @@ end
 
 if vim.g.neovide then
     vim.o.guifont = "RobotoMono Nerd Font Mono:h11"
-    vim.g.neovide_cursor_animation_length = 0
+    -- vim.g.neovide_cursor_animation_length = 0
 end
